@@ -12,16 +12,57 @@
       let choice;
       switch (rng) {
         case 0
-        :choice = "R"
+        :choice = "rock"
         break;
         case 1
-        :choice = "P"
+        :choice = "paper"
         break;
         case 2
-        :choice = "S"
+        :choice = "scissors"
         break;
       }
       return choice
+    }
+    function playRound(playerSelection, computerSelection) {
+      let rockRegex = /rock/gi
+      let paperRegex = /paper/gi
+      let scissorsRegex = /scissors/gi
+      if(playerSelection.match(rockRegex)){
+        switch(computerSelection){
+          case "rock"
+          :return "tie"
+          break
+          case "paper"
+          :return "u lose"
+          break
+          case "scissors"
+          :return "u win"
+          break
+        }
+      }else if(playerSelection.match(paperRegex)){
+        switch(computerSelection){
+          case "rock"
+          :return "u win"
+          break
+          case "paper"
+          :return "tie"
+          break
+          case "scissors"
+          :return "u lose"
+        }
+      }else{
+        switch(computerSelection){
+          case "rock"
+          :return "u lose"
+          break
+          case "paper"
+          :return "u win"
+          break
+          case "scissors"
+          :return "tie"
+          break
+        }
+      }
     }
   </script>
 </body>

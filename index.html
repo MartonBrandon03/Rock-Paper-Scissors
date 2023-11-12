@@ -7,7 +7,7 @@
 </head>
 <body>
   <script>
-    function GetComputerChoice(){
+    function getComputerChoice(){
       let rng = Math.floor(Math.random()*3)
       let choice;
       switch (rng) {
@@ -62,6 +62,30 @@
           :return "tie"
           break
         }
+      }
+    }
+    function game(){
+      let hc = 0
+      let cc = 0
+      for(let i =0;hc<5||cc<5;i++){
+        switch(playRound(prompt("choose"),getComputerChoice())){
+          case "tie"
+          :console.log("tie")
+          break
+          case "u lose"
+          :cc++
+          console.log("u lost")
+          break
+          case "u win"
+          :hc++
+          console.log("u won")
+          break
+        }
+      }
+      if(cc == 5){
+        return "u lost the game"
+      } else {
+        return "u won the game"
       }
     }
   </script>

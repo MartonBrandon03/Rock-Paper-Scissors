@@ -9,6 +9,19 @@
   <script>
     function GetComputerChoice(){
       let rng = Math.floor(Math.random()*3)
+      let choice;
+      switch (rng) {
+        case 0
+        :choice = "R"
+        break;
+        case 1
+        :choice = "P"
+        break;
+        case 2
+        :choice = "S"
+        break;
+      }
+      return choice
     }
   </script>
 </body>

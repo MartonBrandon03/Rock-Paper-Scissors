@@ -61,7 +61,6 @@ container.addEventListener('click',e=>{
     break;
   }
 });
-
 function playRound(playerSelection, computerSelection) {
   if(playerSelection === 'rock'){
     match1.innerText = 'Rock';
@@ -106,30 +105,6 @@ function playRound(playerSelection, computerSelection) {
       case "scissors"
       :match2.innerText = 'Scissors';
       break;
-    }
-  }
-}
-function game(){
-  let hc = 0
-  let cc = 0
-  for(let i =0;hc<5||cc<5;i++){
-    switch(playRound(prompt("choose"),getComputerChoice())){
-      case "tie"
-      :console.log("tie")
-      break
-      case "u lose"
-      :++cc
-      console.log("u lost")
-      break
-      case "u win"
-      :++hc
-      console.log("u won")
-      break
-    }
-    if(cc == 5){
-      return "u lost the game"
-      } else if(hc == 5) {
-      return "u won the game"
     }
   }
 }
